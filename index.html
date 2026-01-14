@@ -19,9 +19,9 @@
 
     <!-- JS -->
     <script src="js/jquery-3.7.0.min.js"></script>
-    <script src="js/script.jss"></script>
+    <script src="js/script.js"></script>
     <!-- <script src="js/materialize.min.js"></script> -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
     <!-- <script src="js/toplist.js"></script> -->
     <!-- <script src="js/Logo.js"></script> -->
     <!-- <script src="js/loader.js"></script> -->
@@ -29,56 +29,230 @@
 
 <body>
         <!-- ヘッダー -->
-    <header>
-        <div class="navbar-fixed">
-            <nav>
-                <div class="nav-wrapper container">
-                    <!-- サイドナビトリガー -->
-                    <a data-target="nav-mobile" class="sidenav-trigger">
-                        <i class="material-icons led-color-of-icon">menu</i>
-                    </a>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
 
-                    <!-- ナビゲーションメニュー -->
-                    <ul class="right menu">
-                        <li><a href="#">TOP</a></li>
-                        <li class="dropdown">
-                            <a href="#profile">ポートフォリオ</a>
-                            <ul class="dropdown-list">
-                                <li><a href="#productionSkills">制作スキル</a></li>
-                                <li><a href="#GitHub">GitHub</a></li>
-                                <li><a href="#Production">制作物</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
+      <!-- ロゴ / タイトル -->
+      <a class="navbar-brand" href="#">Portfolio</a>
 
-        <!-- サイドナビ -->
-        <ul id="nav-mobile" class="side-nav" style="transform: translateX(-100%);">
-            <li><a href="#" class="scroll-to-top-li">トップ</a></li>
+      <!-- ハンバーガー -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-            <!-- アコーディオンメニュー -->
-            <li>
-                <ul class="collapsible collapsible-accordion">
-                    <li>
-                        <a class="collapsible-header">プロフィール ▼</a>
-                        <div class="collapsible-body">
-                            <ul>
-                                <li><a href="#profile">自己紹介</a></li>
-                                <li><a href="#productionSkills">制作スキル</a></li>
-                                <li><a href="#GitHub">GitHub</a></li>
-                                <li><a href="#Production">制作物</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </li>
+      <!-- メニュー -->
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto">
+
+          <li class="nav-item">
+            <a class="nav-link" href="#profile">TOP</a>
+          </li>
+
+          <!-- ドロップダウン -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              ポートフォリオ
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="#productionSkills">制作スキル</a></li>
+              <li><a class="dropdown-item" href="#GitHub">GitHub</a></li>
+              <li><a class="dropdown-item" href="#Production">制作物</a></li>
+            </ul>
+          </li>
+
         </ul>
-    </header>
+      </div>
 
+    </div>
+  </nav>
+</header>
 
-    <h4>Portforio</h4>
+    <!-- プロフィール -->
+    <div id="profile">
+        <div class="mybg-gradient text-center">
+            <h1>ポートフォリオ</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="profile-section row align-items-center">
+            <div class="col-md-4 text-center text-md-left">
+                <!-- <img src="img/IMG_4082.png" alt="顔写真" class="profile-photo img-fluid"> -->
+            </div>
+
+            <div class="col-md-8">
+                <div class="profile-details text-center text-md-left">
+                    <h4>自己紹介</h4>
+                    <hr>
+                    <h2>星野 雅斗</h2>
+                    <p>2006年2月28日生まれ</p>
+                    <p>岩崎学園 横浜デジタルアーツ専門学校 ゲーム科</p>
+
+                    <table class="table table-bordered text-center">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>内容</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>趣味</th>
+                                <th>ゲーム プログラミング</th>
+                            </tr>
+                            <tr>
+                                <th>好きなゲーム</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <th>特技</th>
+                                <th></th>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a class='gallery-link-card' href='/sub' target='_blank'>
+        <div class="gallery-bg"></div>
+
+        <div class="gallery-content text-center">
+            <h3 class="mb-3">趣味・制作物ギャラリー</h3>
+            <p class="mb-4">「マイクラ作品」・「作成動画」・「作成曲」・制作物まとめページはこちら</p>
+            <span class="btn btn-primary btn-lg" style="pointer-events: none;">開く</span>
+        </div>
+    </a>
+
+    <!-- 制作スキル -->
+    <div id="productionSkills">
+        <div class="mybg-gradient">
+            <h1 class="text-center">制作スキル</h1>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div id="content">
+            <div class="col-md-12">
+                <div class="profile-details text-center text-md-left">
+                    <h5>使用可能なアプリケーション</h5>
+                    <hr>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>言語・アプリケーション名</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>開発言語</th>
+                                <th>C , C++ , C# , JavaScript , HTML/CSS , SQL</th>
+                            </tr>
+                            <tr>
+                                <th>プログラム開発環境</th>
+                                <th>Unity, UE 4 or 5, Microsoft VisualStudio, Microsoft VisualStudio Code, Github,<s>GameMaker 8.0</s></th>
+                            </tr>
+                            <tr>
+                                <th>企画・業務効率化ソフト</th>
+                                <th>Discord, Notion</th>
+                            </tr>
+                            <tr>
+                                <th>2Dグラフィックソフト</th>
+                                <th>Photoshop, FireAlpaca64</th>
+                            </tr>
+                            <tr>
+                                <th>3Dグラフィックソフト</th>
+                                <th>Blender, MAYA</th>
+                            </tr>
+                            <tr>
+                                <th>音楽ソフト【DTM】</th>
+                                <th>Domino , Studio One 5 Professional</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- GitHub -->
+    <div id="GitHub">
+        <div class="mybg-gradient">
+            <h1 class="text-center">GitHub</h1>
+        </div>
+    </div>
+
+    <!-- 白背景ラッパー -->
+    <div class="github-wrapper" style="background-color: white; padding: 40px 0;">
+        <div class="container">
+            <div class="mt-4">
+                <div class="col-md-12 d-flex justify-content-center align-items-center flex-column">
+                    <div class="message-box p-3 border rounded">
+                        <p class="mb-0">
+                            JavaScriptで、制作した画像<br>
+                            【 マウスカーソル or スマホだったらスライド】
+                        </p>
+                    </div>
+
+                    <!-- Canvas -->
+                    <canvas id="canvas"></canvas>
+
+                    <!-- 画像 -->
+                    <img src="img/github_PNG80.png" class="Logo mb-3" style="max-width: 250px;">
+
+                    <div class="card-body centered-btn me-2">
+                        <a href="https://github.com/TutiyaHibiki0222" class="btn btn-dark btn-lg" target="_blank">
+                            <i class="bi bi-github"></i> Visit my GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 制作物 -->
+    <div id="Production">
+        <div class="mybg-gradient">
+            <h1 class="text-center">制作物</h1>
+        </div>
+    </div>
+
+    <div id="content">
+        <div class="container mt-4">
+
+            <!-- 絞り込みボタン -->
+            <div class="filter-buttons mb-4 text-center">
+                <button class="btn btn-outline-secondary me-2 active" data-filter="all">全て</button>
+                <button class="btn btn-outline-dark me-2" data-filter="2d">2D</button>
+                <button class="btn btn-outline-danger me-2" data-filter="3d">3D</button>
+                <button class="btn btn-outline-primary me-2" data-filter="lib">拡張ツール & ライブラリ</button>
+            </div>
+
+            <!-- C++ 作品 -->
+            <h2 class="title-with-lines" id="cpp-row-title">C++ 作品</h2>
+            <div class="row" id="cpp-row">
+                <!-- C++ のカードがここへ入る -->
+            </div>
+
+            <!-- Unity 作品 -->
+            <h2 class="title-with-lines" id="unity-row-title">Unity 作品</h2>
+            <div class="row" id="unity-row">
+                <!-- Unity のカードがここへ入る -->
+            </div>
+
+            <!-- UE 作品 -->
+            <h2 class="title-with-lines"  id="ue-row-title">Unreal Engine 作品</h2>
+            <div class="row" id="ue-row">
+                <!-- UE のカードがここへ入る -->
+            </div>
+
+        </div>
+    </div>
+
 
 </body>
 </html>
